@@ -4,16 +4,21 @@ public class SetHP : MonoBehaviour
 {
 
     [SerializeField] string EntityType;
+    [SerializeField] int HP;
+    [SerializeField] int maxHP = 5;
 
-    // Start is called before the first frame update
+    void SetNewHP(int newHP)
+    {
+        HP = newHP;
+        Debug.Log($"I'm {EntityType} and my HP is {HP}!");
+    }
     void Start()
     {
-        
-    }
+        SetNewHP(maxHP);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // if (EntityType == "Player")
+        //     SetNewHP(50);
+        // else if (EntityType == "Enemy")
+        //     SetNewHP(10);
     }
 }
