@@ -8,9 +8,10 @@ public class GameObjectScripting : MonoBehaviour
     [SerializeField] GameObject kaveri;
     [SerializeField] GameObject ekaLapsi;
     [SerializeField] GameObject tokaLapsi;
+    [SerializeField] GameObject kolmasLapsi;
     [SerializeField] GameObject äitee;
 
-
+    bool isDestroyed = false;
     void Awake()
     {
         Debug.Log("Awake!");    
@@ -22,8 +23,18 @@ public class GameObjectScripting : MonoBehaviour
         
         ekaLapsi = transform.GetChild(0).gameObject;
         tokaLapsi = transform.Find("Minion").gameObject;
+        kolmasLapsi = Instantiate(
+            tokaLapsi,                      // create copy of tokaLapsi
+            new Vector3(0.5f, 0.0f, -1.0f), // position with respect to parent
+            Quaternion.identity,            // default rotation 
+            transform                       // parent is this gameobject's transform
+        );
+        
+        kolmasLapsi.name = "Grunt";
 
         äitee = transform.parent.gameObject;
+
+        transform.SetParent(kaveri.transform);
     }
 
     // Update is called once per frame
@@ -32,6 +43,7 @@ public class GameObjectScripting : MonoBehaviour
         if (ekaLapsi != null && tokaLapsi != null)
         {
             Debug.Log(äitee.name);
+            Debug.Log(transform.parent.name);
             Debug.Log($"ekalapsi: {ekaLapsi.name}, tokalapsi: {tokaLapsi.name}");
         }
 
@@ -39,5 +51,12 @@ public class GameObjectScripting : MonoBehaviour
         if (kaveri != null)
             kaveri.transform.position += velocity;
         transform.position += velocity;
+
+        if (Time.time > 3.0f && !isDestroyed)
+        {
+            Destroy(kaveri);
+            isDestroyed = true;
+        }
+
     }
 }
