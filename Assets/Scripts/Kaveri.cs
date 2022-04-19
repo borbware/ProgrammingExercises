@@ -1,17 +1,13 @@
 using UnityEngine;
 
-public class LightSwitch : MonoBehaviour
+public class Kaveri : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("dsaf");
     }
-    void OnMouseOver() {
-        if (Input.GetMouseButtonDown(0)) {
-            Debug.Log("heh"); 
-        }
-    }
+
     // Update is called once per frame
     void Update()
     {
