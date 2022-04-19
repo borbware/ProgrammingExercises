@@ -36,11 +36,18 @@ public class TransformExamples : MonoBehaviour
                 360 * Time.deltaTime
             );
         if (Input.GetKey(KeyCode.LeftAlt))
-            transform.Rotate(
-                origUpAxis,
+            transform.RotateAround(
+                transform.position,
+                transform.right,
                 180 * Time.deltaTime
             );
-
+            // More difficult way:
+            // transform.Rotate(
+            //     0,
+            //     180 * Time.deltaTime,
+            //     0,
+            //     Space.Self
+            // );
     }
     void Scale()
     {
