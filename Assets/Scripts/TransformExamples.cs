@@ -5,12 +5,10 @@ public class TransformExamples : MonoBehaviour
     // Start is called before the first frame update
 
     GameObject myChild;
-    Vector3 origUpAxis;
     void Start()
     {
         myChild = transform.Find("Lapsonen").gameObject;
         Debug.Log(myChild.name);
-        origUpAxis = transform.up;
     }
 
     void Translate()

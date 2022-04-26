@@ -6,9 +6,10 @@ public class SetHP : MonoBehaviour
     [SerializeField] string EntityType;
     [SerializeField] int HP;
     [SerializeField] int maxHP = 5;
-
-    void SetNewHP(int newHP)
+    public bool isRed;
+    public void SetNewHP(int newHP)
     {
+        isRed = false;
         HP = newHP;
         Debug.Log($"I'm {EntityType} and my HP is {HP}!");
     }
