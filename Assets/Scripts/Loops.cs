@@ -8,6 +8,8 @@ public class Loops : MonoBehaviour
     int numberOfSolttus = 0;
     [SerializeField] GameObject solttu;
     [SerializeField] GameObject lähetti;
+
+    int solttusToCreate = 5;
     void WhileLoop()
     {
         int count = 5;
@@ -92,14 +94,18 @@ public class Loops : MonoBehaviour
             }        
         }
     }
-
+    void CreateNSolttus()
+    {
+        for (int i = 0; i < solttusToCreate; i++)
+            CreateSolttu(i, 0, 0);
+        solttusToCreate++;
+    }
     private void Start() {
         CreateFieldOfSolttus();
         // RotateSolttus();
-        RotateSolttus2D();
-    }
-
-    private void Update() {
-        
+        // RotateSolttus2D();
+        // CreateNSolttus();
+        // CreateNSolttus();
+        // CreateNSolttus();
     }
 }
