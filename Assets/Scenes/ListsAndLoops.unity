@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321371099}
   - component: {fileID: 321371098}
+  - component: {fileID: 321371100}
   m_Layer: 0
   m_Name: LoopScriptHandler
   m_TagString: Untagged
@@ -316,6 +317,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &321371100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321371097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91eaf110b2cc8a64b882424d83063989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &426506339
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +531,8 @@ GameObject:
   - component: {fileID: 1791993661}
   - component: {fileID: 1791993660}
   - component: {fileID: 1791993664}
+  - component: {fileID: 1791993666}
+  - component: {fileID: 1791993665}
   m_Layer: 0
   m_Name: "L\xE4hetti"
   m_TagString: Untagged
@@ -612,6 +627,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 665c513652a84f546b8b0b2b072a86cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1791993665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791993659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822b63f25595cd740be23b42de20ccbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1791993666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791993659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295b087c36338ee45becb3ef0e784b84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1993865415
