@@ -17,6 +17,7 @@ namespace ClassExample
     public class Enemy
     {
         protected int HP = 0;
+        // public int HP { get; set; } 
         protected int maxHP = 0;
         protected string name; 
         public static string enemyDescription = "Enemies are bouncy";
@@ -40,6 +41,24 @@ namespace ClassExample
             Debug.Log(enemyDescription);
             this.HP = newHP;
         }
+        public virtual int GetHP()
+        {
+            return HP;
+        }
+
+        public int HitPoint
+        {
+            get
+            {
+                return HP;
+            }
+            set
+            {
+                Debug.Log($"HP of {name} changed to {value}");
+                HP = value;
+            }
+        }
+
         public static void DescribeEnemies()
         {
             Debug.Log("Enemies are spiky");
