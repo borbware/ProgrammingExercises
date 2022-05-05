@@ -536,6 +536,30 @@ MonoBehaviour:
   scaleA: {fileID: 2072987425}
   scaleB: {fileID: 260009464}
   kaveri: {fileID: 1677944509}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!65 &1998048920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -688,8 +712,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007904980}
-  m_LocalRotation: {x: 0.069764614, y: 0.9283998, z: -0.2865762, w: 0.22601064}
-  m_LocalPosition: {x: -8.920963, y: 19.08884, z: 21.146744}
+  m_LocalRotation: {x: 0.03359461, y: 0.96639276, z: -0.1827505, w: 0.17764793}
+  m_LocalPosition: {x: -1.327466, y: 16.389793, z: 19.706535}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

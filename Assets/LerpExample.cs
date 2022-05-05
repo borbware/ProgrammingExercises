@@ -13,6 +13,8 @@ public class LerpExample : MonoBehaviour
     [SerializeField] Transform scaleA, scaleB;
     [SerializeField] Transform kaveri;
 
+    [SerializeField] AnimationCurve curve; 
+
     Renderer _renderer;
     bool lerping = false;
     void Start()
@@ -21,6 +23,7 @@ public class LerpExample : MonoBehaviour
         transform.position = pointA.position;
         kaveri.position = pointA.position;
     }
+
 
     void LerpExample1()
     {
@@ -34,8 +37,24 @@ public class LerpExample : MonoBehaviour
 
         if (lerping)
         {
+
+            // transform.position = new Vector3(
+            //     Mathf.Lerp(a, b, t),
+            //     transform.position.y,
+            //     transform.position.z);
+
+            // transform.position = new Vector3(
+            //     Mathf.SmoothStep(a, b, t),
+            //     transform.position.y,
+            //     transform.position.z);
+
+            float curveInterpolate(float a, float b, float t)
+            {
+                return a + (b - a) * curve.Evaluate(t);       
+            }
+
             transform.position = new Vector3(
-                Mathf.Lerp(a, b, t),
+                curveInterpolate(a, b, t),
                 transform.position.y,
                 transform.position.z);
 
@@ -43,7 +62,7 @@ public class LerpExample : MonoBehaviour
             //     new Color(1f, 1f, 1f, Mathf.Lerp(1f, 0f, t))
             // );
             
-            t += Time.deltaTime / 2; // takes 2 seconds to reach end
+            t += Time.deltaTime / 1; // takes 2 seconds to reach end
 
             if (transform.position.x == b)
                 lerping = false;
@@ -221,14 +240,14 @@ void BetterPositionLerp()
 
     void Update()
     {
-        // LerpExample1();
+        LerpExample1();
         // LerpScaleFactor();
 
         // LerpVector3();
         // LerpQuaterion();
         // LerpScale();
 
-        BetterPositionLerp();
+        // BetterPositionLerp();
 
     }
 }
